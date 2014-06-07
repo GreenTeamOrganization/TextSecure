@@ -16,7 +16,7 @@
         android:gravity="center"
         android:textStyle="italic"
         android:textColor="?attr/conversation_group_member_name"
-        android:textSize="14sp" />
+        android:textSize="?attr/font_medium" />
     <TextView android:id="@+id/conversation_item_date"
         android:autoLink="all"
         android:layout_width="wrap_content"

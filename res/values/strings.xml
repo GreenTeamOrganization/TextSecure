@@ -747,6 +747,10 @@
     <string name="preferences__dark_theme">Dark Theme</string>
     <string name="preferences__appearance">Appearance</string>
     <string name="preferences__theme">Theme</string>
+    <string name="preferences__font_size">Message Font Size</string>
+    <string name="preferences__small_font_size">Small</string>
+    <string name="preferences__medium_font_size">Medium</string>
+    <string name="preferences__large_font_size">Large</string>
     <string name="preferences__default">Default</string>
     <string name="preferences__language">Language</string>
     <string name="preferences__make_default_sms_app">Set as default SMS app</string>

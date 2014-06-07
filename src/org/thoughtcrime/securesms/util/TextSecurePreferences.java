@@ -10,6 +10,7 @@ public class TextSecurePreferences {
   public  static final String CHANGE_PASSPHRASE_PREF           = "pref_change_passphrase";
   public  static final String DISABLE_PASSPHRASE_PREF          = "pref_disable_passphrase";
   public  static final String THEME_PREF                       = "pref_theme";
+  public  static final String FONT_SIZE_PREF                   = "pref_font_size";
   public  static final String LANGUAGE_PREF                    = "pref_language";
   public  static final String MMSC_HOST_PREF                   = "pref_apn_mmsc_host";
   public  static final String MMSC_PROXY_HOST_PREF             = "pref_apn_mms_proxy";
@@ -169,6 +170,10 @@ public class TextSecurePreferences {
 
   public static String getTheme(Context context) {
     return getStringPreference(context, THEME_PREF, "light");
+  }
+
+  public static String getFontSize(Context context) {
+    return getStringPreference(context, FONT_SIZE_PREF, "medium");
   }
 
   public static boolean isVerifying(Context context) {

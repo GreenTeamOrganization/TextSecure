@@ -104,6 +104,13 @@
                       android:entries="@array/language_entries"
                       android:entryValues="@array/language_values"
                       android:defaultValue="zz"/>
+
+      <ListPreference android:key="pref_font_size"
+          android:title="@string/preferences__font_size"
+          android:entries="@array/pref_font_size_entries"
+          android:entryValues="@array/pref_font_size_values"
+          android:defaultValue="Medium">
+      </ListPreference>
   </PreferenceCategory>
 
   <PreferenceCategory android:title="@string/preferences__storage">
