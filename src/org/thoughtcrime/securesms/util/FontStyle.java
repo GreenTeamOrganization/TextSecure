@@ -3,7 +3,9 @@ package org.thoughtcrime.securesms.util;
 import org.thoughtcrime.securesms.R;
 
 /**
- * Created by Fotis on 1/6/2014.
+ * Sets a variety of options for Font Size at settings.
+ *
+ * @author Fotis
  */
 public enum FontStyle{
     Small(R.style.FontStyle_Small, "Small"),

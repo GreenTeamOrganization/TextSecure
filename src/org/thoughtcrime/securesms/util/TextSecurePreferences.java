@@ -172,6 +172,7 @@ public class TextSecurePreferences {
     return getStringPreference(context, THEME_PREF, "light");
   }
 
+  // Get the Font Size Preference
   public static String getFontSize(Context context) {
     return getStringPreference(context, FONT_SIZE_PREF, "medium");
   }
