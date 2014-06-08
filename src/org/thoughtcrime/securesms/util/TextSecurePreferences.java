@@ -253,6 +253,7 @@ public class TextSecurePreferences {
     return getBooleanPreference(context, VIBRATE_PREF, true);
   }
 
+  //A "wake up device" preference is added.
   public static boolean isWakeUpDeviceEnabled(Context context) {
     return getBooleanPreference(context, WAKE_UP_DEVICE_PREF, false);
   }

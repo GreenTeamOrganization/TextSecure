@@ -27,7 +27,7 @@ import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.PowerManager;
+import android.os.PowerManager; //import PowerManager into class
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationCompat.BigTextStyle;
 import android.support.v4.app.NotificationCompat.InboxStyle;
@@ -373,6 +373,7 @@ public class MessageNotifier {
                         Integer.parseInt(blinkPatternArray[1]));
     }
 
+    // Wake device up if a new message is received
     if(wakeup) {
       PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
       PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK
