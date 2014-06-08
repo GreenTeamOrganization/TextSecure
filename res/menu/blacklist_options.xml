@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/blacklist_options__menu_new_block_contact"
+          android:id="@+id/menu_new_block_contact"
+          android:icon="?attr/menu_new_conversation_icon"
+          android:showAsAction="always" />
+
+</menu>

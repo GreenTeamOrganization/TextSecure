@@ -206,6 +206,7 @@ public class SmsReceiver {
     else                                return storeStandardMessage(masterSecret, message);
   }
 
+  //should add check if recipient number exists to Blacklist
   private void handleReceiveMessage(MasterSecret masterSecret, Intent intent) {
     if (intent.getExtras() == null) return;
 

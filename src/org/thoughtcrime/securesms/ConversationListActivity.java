@@ -131,6 +131,9 @@ public class ConversationListActivity extends PassphraseRequiredSherlockFragment
     } else if (selected.equals("contact_identity_keys")) {
       intent = new Intent(this, ReviewIdentitiesActivity.class);
       intent.putExtra("master_secret", masterSecret);
+    } else if (selected.equals("blacklist")) {
+      intent = new Intent(this, BlackListActivity.class);
+      intent.putExtra("master_secret", masterSecret);
     } else {
       return;
     }

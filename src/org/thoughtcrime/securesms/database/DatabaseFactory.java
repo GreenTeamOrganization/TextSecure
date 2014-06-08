@@ -55,6 +55,7 @@ public class DatabaseFactory {
   private static final int INTRODUCED_GROUP_DATABASE_VERSION = 11;
   private static final int INTRODUCED_PUSH_FIX_VERSION       = 12;
   private static final int DATABASE_VERSION                  = 12;
+  private static final int INTRODUCED_BLACKLIST_VERSION      = 13;
 
   private static final String DATABASE_NAME    = "messages.db";
   private static final Object lock             = new Object();
@@ -73,6 +74,7 @@ public class DatabaseFactory {
   private final MmsAddressDatabase mmsAddress;
   private final MmsSmsDatabase mmsSmsDatabase;
   private final IdentityDatabase identityDatabase;
+  private final BlackListDatabase blacklistDatabase;
   private final DraftDatabase draftDatabase;
   private final PushDatabase pushDatabase;
   private final GroupDatabase groupDatabase;
@@ -133,6 +135,10 @@ public class DatabaseFactory {
     return getInstance(context).identityDatabase;
   }
 
+  public static BlackListDatabase getBlackListDatabase(Context context) {
+    return getInstance(context).blacklistDatabase;
+  }
+
   public static DraftDatabase getDraftDatabase(Context context) {
     return getInstance(context).draftDatabase;
   }
@@ -156,6 +162,7 @@ public class DatabaseFactory {
     this.mmsAddress       = new MmsAddressDatabase(context, databaseHelper);
     this.mmsSmsDatabase   = new MmsSmsDatabase(context, databaseHelper);
     this.identityDatabase = new IdentityDatabase(context, databaseHelper);
+    this.blacklistDatabase= new BlackListDatabase(context, databaseHelper);
     this.draftDatabase    = new DraftDatabase(context, databaseHelper);
     this.pushDatabase     = new PushDatabase(context, databaseHelper);
     this.groupDatabase    = new GroupDatabase(context, databaseHelper);
@@ -173,6 +180,7 @@ public class DatabaseFactory {
     this.mmsAddress.reset(databaseHelper);
     this.mmsSmsDatabase.reset(databaseHelper);
     this.identityDatabase.reset(databaseHelper);
+    this.blacklistDatabase.reset(databaseHelper);
     this.draftDatabase.reset(databaseHelper);
     this.pushDatabase.reset(databaseHelper);
     this.groupDatabase.reset(databaseHelper);
@@ -443,6 +451,7 @@ public class DatabaseFactory {
       db.execSQL(DraftDatabase.CREATE_TABLE);
       db.execSQL(PushDatabase.CREATE_TABLE);
       db.execSQL(GroupDatabase.CREATE_TABLE);
+      db.execSQL(BlackListDatabase.CREATE_TABLE);
 
       executeStatements(db, SmsDatabase.CREATE_INDEXS);
       executeStatements(db, MmsDatabase.CREATE_INDEXS);
@@ -459,6 +468,10 @@ public class DatabaseFactory {
 
       if (oldVersion < INTRODUCED_IDENTITIES_VERSION) {
         db.execSQL("CREATE TABLE identities (_id INTEGER PRIMARY KEY, key TEXT UNIQUE, name TEXT UNIQUE, mac TEXT);");
+      }
+
+      if (oldVersion < INTRODUCED_BLACKLIST_VERSION) {
+        db.execSQL("CREATE TABLE blacklist (_id INTEGER PRIMARY KEY, key TEXT UNIQUE, block_number TEXT UNIQUE);");
       }
 
       if (oldVersion < INTRODUCED_INDEXES_VERSION) {

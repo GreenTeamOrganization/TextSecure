@@ -645,6 +645,9 @@
     <string name="verify_keys_activity__they_read_this">They read this:</string>
     <string name="verify_keys_activity__you_read_this">You read this:</string>
 
+    <!-- blacklist -->
+    <string name="blacklist__you_don_t_currently_have_any_contact_in_your_blacklist">You don\'t currently have any contact in your blacklist.</string>
+
     <!-- AndroidManifest.xml -->
 
     <string name="AndroidManifest__create_passphrase">Create Passphrase</string>
@@ -656,6 +659,7 @@
     <string name="AndroidManifest__change_passphrase">Change Passphrase</string>
     <string name="AndroidManifest__verify_session">Verify Session</string>
     <string name="AndroidManifest__verify_identity">Verify Identity</string>
+    <string name="AndroidManifest__blacklist">BlackList</string>
     <string name="AndroidManifest__manage_identity_keys">Manage Identity Keys</string>
     <string name="AndroidManifest__complete_key_exchange">Complete Key Exchange</string>
     <string name="AndroidManifest__log_submit">Submit Debug Logs</string>
@@ -664,6 +668,7 @@
     <string name="arrays__import_export">Import / Export</string>
     <string name="arrays__my_identity_key">My Identity Key</string>
     <string name="arrays__contact_keys">Contact Keys</string>
+    <string name="arrays__blacklist">BlackList</string>
 
     <!-- preferences.xml -->
     <string name="preferences__general">General</string>
@@ -845,6 +850,9 @@
     <string name="text_secure_normal__menu_settings">Settings</string>
     <string name="text_secure_normal__menu_clear_passphrase">Lock</string>
     <string name="text_secure_normal__mark_all_as_read">Mark All Read</string>
+
+    <!-- blacklist -->
+    <string name="blacklist_options__menu_new_block_contact">Add Contact</string>
 
     <!-- verify_keys -->
     <string name="verify_keys__menu_verified">Verified</string>
