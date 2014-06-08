@@ -28,6 +28,11 @@ import org.thoughtcrime.securesms.util.DynamicLanguage;
 import org.thoughtcrime.securesms.util.DynamicTheme;
 import org.whispersystems.textsecure.crypto.MasterSecret;
 
+/**
+* Creates an Activity for the BlackList.
+*
+*/
+
 public class BlackListActivity extends SherlockFragmentActivity {
 
     private final DynamicTheme    dynamicTheme    = new DynamicTheme();

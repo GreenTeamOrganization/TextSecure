@@ -34,7 +34,8 @@ import org.thoughtcrime.securesms.recipients.Recipients;
 /**
  * List item view for displaying blacklist.
  *
- * @author
+ * @author GreenTeam
+ *
  */
 public class BlackListView extends RelativeLayout
         implements Recipient.RecipientModifiedListener

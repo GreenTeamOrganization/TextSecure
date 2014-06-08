@@ -34,6 +34,13 @@ import org.whispersystems.textsecure.util.Base64;
 
 import java.io.IOException;
 
+/**
+ * Handles the Database for the BlackList.
+ *
+ * @author GreenTeam
+ *
+ */
+
 public class BlackListDatabase extends Database {
 
     private static final Uri CHANGE_URI = Uri.parse("content://textsecure/blockednumbers");
